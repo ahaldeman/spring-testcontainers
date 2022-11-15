@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-dummy-table
+      author: Alex Haldeman
+      sqlFile:
+        path: db/changelog/create-dummy-table.sql
