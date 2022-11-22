@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://db;createDatabaseIfNotExist=true
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    username: sa
+    password: 'Str0ngPassw0rd'
+  redis:
+    host: redis
+    port: 6379
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    properties:
+      hibernate:
+        format-sql: true
+    hibernate:
+      ddl-auto: update
+
+google-books-base-url: https://www.googleapis.com
