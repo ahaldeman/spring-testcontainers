@@ -22,3 +22,8 @@ spring:
         format-sql: true
     hibernate:
       ddl-auto: none
+  redis:
+    host: localhost
+    port: 6379
+
+google-books-base-url: https://www.googleapis.com
