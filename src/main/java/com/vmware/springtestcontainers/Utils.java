@@ -5,8 +5,22 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Utils {
-    public static Date parseDate(String dateString) throws ParseException {
+
+    public static boolean isDateInISOFormat(String dateString) {
+        try {
+            new SimpleDateFormat("yyyy-MM-dd").parse(dateString);
+            return true;
+        } catch (ParseException e) {
+            return false;
+        }
+    }
+
+    public static Date parseDate(String dateString) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        return new Date(dateFormat.parse(dateString).getTime());
+        try {
+            return new Date(dateFormat.parse(dateString).getTime());
+        } catch (ParseException e) {
+            throw new RuntimeException("Unable to parse date: " + dateString, e);
+        }
     }
 }

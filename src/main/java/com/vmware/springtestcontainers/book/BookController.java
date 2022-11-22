@@ -45,4 +45,11 @@ public class BookController {
     public void deleteAll() {
         bookService.deleteAll();
     }
+
+    @GetMapping("/book/search")
+    public ResponseEntity<BooksResponse> searchBooks(@RequestParam String title) {
+        return ResponseEntity.ok(BooksResponse.builder()
+            .books(bookService.searchBooks(title))
+            .build());
+    }
 }
