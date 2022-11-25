@@ -1,3 +1,0 @@
-CREATE TABLE dummy (
-    id CHAR(36) NOT NULL PRIMARY KEY
-);

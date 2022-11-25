@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: create-dummy-table
+      id: create-book-table
       author: Alex Haldeman
       sqlFile:
-        path: db/changelog/create-dummy-table.sql
+        path: db/changelog/create-book-table.sql
