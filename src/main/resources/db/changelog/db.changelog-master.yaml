@@ -4,3 +4,13 @@ databaseChangeLog:
       author: Alex Haldeman
       sqlFile:
         path: db/changelog/create-book-table.sql
+  - changeSet:
+      id: rename-isbn-column
+      author: Alex Haldeman
+      sqlFile:
+        path: db/changelog/rename-isbn-column.sql
+  - changeSet:
+      id: add-isbn10-column
+      author: Alex Haldeman
+      sqlFile:
+        path: db/changelog/add-isbn10-column.sql

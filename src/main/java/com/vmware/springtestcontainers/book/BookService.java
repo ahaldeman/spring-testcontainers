@@ -24,7 +24,7 @@ public class BookService {
     }
 
     public Optional<Book> saveFavoriteBook(Book book) {
-        Optional<Book> existingBook = bookRepository.findBookByIsbn(book.getIsbn());
+        Optional<Book> existingBook = bookRepository.findBookByIsbn13(book.getIsbn13());
 
         if (existingBook.isPresent()) {
             return Optional.empty();
@@ -34,7 +34,7 @@ public class BookService {
     }
 
     public Optional<Book> updateFavoriteBook(Book book) {
-        Optional<Book> existingBook = bookRepository.findBookByIsbn(book.getIsbn());
+        Optional<Book> existingBook = bookRepository.findBookByIsbn13(book.getIsbn13());
 
         if (existingBook.isPresent()) {
             return Optional.of(bookRepository.save(book));

@@ -30,7 +30,9 @@ public class Book implements Serializable {
 
     String authorName;
 
-    String isbn;
+    String isbn13;
+
+    String isbn10;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     Date publishDate;
