@@ -20,7 +20,8 @@ public class BookRandomizer {
             .id(UUID.randomUUID())
             .title(faker.book().title())
             .authorName(faker.book().author())
-            .isbn(faker.number().digits(13))
+            .isbn13(faker.number().digits(13))
+            .isbn10(faker.number().digits(10))
             .publishDate(faker.date().birthday())
             .build();
     }

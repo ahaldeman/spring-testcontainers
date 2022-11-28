@@ -1,0 +1,1 @@
+EXEC sp_rename 'book.isbn', 'isbn13', 'COLUMN'
