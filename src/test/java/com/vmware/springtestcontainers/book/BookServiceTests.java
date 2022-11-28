@@ -52,7 +52,8 @@ class BookServiceTests {
             .id(id)
             .title("Extreme Programming Explained")
             .authorName("Kent Beck")
-            .isbn("9780201616415")
+            .isbn13("9780201616415")
+            .isbn10("0134051998")
             .publishDate(Utils.parseDate("1999-10-05"))
             .build());
 
@@ -68,7 +69,8 @@ class BookServiceTests {
             .id(id)
             .title("Extreme Programming Explained")
             .authorName("Kent Beck")
-            .isbn("9780201616415")
+            .isbn13("9780201616415")
+            .isbn10("0134051998")
             .publishDate(Utils.parseDate("1999-10-05"))
             .build();
 
@@ -84,11 +86,12 @@ class BookServiceTests {
             .id(id)
             .title("Extreme Programming Explained")
             .authorName("Kent Beck")
-            .isbn("9780201616415")
+            .isbn13("9780201616415")
+            .isbn10("0134051998")
             .publishDate(Utils.parseDate("1999-10-05"))
             .build();
 
-        when(bookRepository.findBookByIsbn(any())).thenReturn(Optional.of(book));
+        when(bookRepository.findBookByIsbn13(any())).thenReturn(Optional.of(book));
 
         assertThat(bookService.saveFavoriteBook(book)).isEmpty();
     }
@@ -100,11 +103,12 @@ class BookServiceTests {
             .id(id)
             .title("Extreme Programming Explained")
             .authorName("Kent Beck")
-            .isbn("9780201616415")
+            .isbn13("9780201616415")
+            .isbn10("0134051998")
             .publishDate(Utils.parseDate("1999-10-05"))
             .build();
 
-        when(bookRepository.findBookByIsbn(any())).thenReturn(Optional.of(book));
+        when(bookRepository.findBookByIsbn13(any())).thenReturn(Optional.of(book));
 
         when(bookRepository.save(any())).thenReturn(book);
 
@@ -118,11 +122,12 @@ class BookServiceTests {
             .id(id)
             .title("Extreme Programming Explained")
             .authorName("Kent Beck")
-            .isbn("9780201616415")
+            .isbn13("9780201616415")
+            .isbn10("0134051998")
             .publishDate(Utils.parseDate("1999-10-05"))
             .build();
 
-        when(bookRepository.findBookByIsbn(any())).thenReturn(Optional.empty());
+        when(bookRepository.findBookByIsbn13(any())).thenReturn(Optional.empty());
 
         assertThat(bookService.updateFavoriteBook(book)).isEmpty();
     }

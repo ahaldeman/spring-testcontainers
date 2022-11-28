@@ -27,7 +27,8 @@ public class BookRepositoryTests {
         Book book = Book.builder()
             .title("Extreme Programming Explained")
             .authorName("Kent Beck")
-            .isbn("9780201616415")
+            .isbn13("9780201616415")
+            .isbn10("0134051998")
             .publishDate(Utils.parseDate("1999-10-05"))
             .build();
 
@@ -49,13 +50,14 @@ public class BookRepositoryTests {
         Book book = Book.builder()
             .title("Extreme Programming Explained")
             .authorName("Kent Beck")
-            .isbn("9780201616415")
+            .isbn13("9780201616415")
+            .isbn10("0134051998")
             .publishDate(Utils.parseDate("1999-10-05"))
             .build();
 
         bookRepository.save(book);
 
-        Optional<Book> foundBook = bookRepository.findBookByIsbn("9780201616415");
+        Optional<Book> foundBook = bookRepository.findBookByIsbn13("9780201616415");
 
         assertThat(foundBook).isPresent();
         assertThat(foundBook.get()).isEqualTo(book);
@@ -66,13 +68,14 @@ public class BookRepositoryTests {
         Book book = Book.builder()
             .title("Extreme Programming Explained")
             .authorName("Kent Beck")
-            .isbn("9780201616415")
+            .isbn13("9780201616415")
+            .isbn10("0134051998")
             .publishDate(Utils.parseDate("1999-10-05"))
             .build();
 
         bookRepository.save(book);
 
-        Optional<Book> foundBook = bookRepository.findBookByIsbn("123564894984");
+        Optional<Book> foundBook = bookRepository.findBookByIsbn13("123564894984");
 
         assertThat(foundBook).isEmpty();
     }

@@ -37,7 +37,8 @@ class BookControllerTests {
             .id(id)
             .title("Extreme Programming Explained")
             .authorName("Kent Beck")
-            .isbn("9780201616415")
+            .isbn13("9780201616415")
+            .isbn10("0134051998")
             .publishDate(Utils.parseDate("1999-10-05"))
             .build());
 
@@ -48,7 +49,8 @@ class BookControllerTests {
             .andExpect(jsonPath("$.books[0].id", is(id.toString())))
             .andExpect(jsonPath("$.books[0].title", is("Extreme Programming Explained")))
             .andExpect(jsonPath("$.books[0].authorName", is("Kent Beck")))
-            .andExpect(jsonPath("$.books[0].isbn", is("9780201616415")))
+            .andExpect(jsonPath("$.books[0].isbn13", is("9780201616415")))
+            .andExpect(jsonPath("$.books[0].isbn10", is("0134051998")))
             .andExpect(jsonPath("$.books[0].publishDate", is("1999-10-05")));
     }
 
@@ -59,7 +61,8 @@ class BookControllerTests {
             .id(id)
             .title("Extreme Programming Explained")
             .authorName("Kent Beck")
-            .isbn("9780201616415")
+            .isbn13("9780201616415")
+            .isbn10("0134051998")
             .publishDate(Utils.parseDate("1999-10-05"))
             .build();
 
@@ -73,7 +76,8 @@ class BookControllerTests {
             .andExpect(jsonPath("$.book.id", is(id.toString())))
             .andExpect(jsonPath("$.book.title", is("Extreme Programming Explained")))
             .andExpect(jsonPath("$.book.authorName", is("Kent Beck")))
-            .andExpect(jsonPath("$.book.isbn", is("9780201616415")))
+            .andExpect(jsonPath("$.book.isbn13", is("9780201616415")))
+            .andExpect(jsonPath("$.book.isbn10", is("0134051998")))
             .andExpect(jsonPath("$.book.publishDate", is("1999-10-05")));
     }
 
@@ -84,7 +88,8 @@ class BookControllerTests {
             .id(id)
             .title("Extreme Programming Explained")
             .authorName("Kent Beck")
-            .isbn("9780201616415")
+            .isbn13("9780201616415")
+            .isbn10("0134051998")
             .publishDate(Utils.parseDate("1999-10-05"))
             .build();
 
@@ -105,7 +110,8 @@ class BookControllerTests {
             .id(id)
             .title("Extreme Programming Explained")
             .authorName("Kent Beck")
-            .isbn("9780201616415")
+            .isbn13("9780201616415")
+            .isbn10("0134051998")
             .publishDate(Utils.parseDate("1999-10-05"))
             .build();
 
@@ -119,7 +125,8 @@ class BookControllerTests {
             .andExpect(jsonPath("$.book.id", is(id.toString())))
             .andExpect(jsonPath("$.book.title", is("Extreme Programming Explained")))
             .andExpect(jsonPath("$.book.authorName", is("Kent Beck")))
-            .andExpect(jsonPath("$.book.isbn", is("9780201616415")))
+            .andExpect(jsonPath("$.book.isbn13", is("9780201616415")))
+            .andExpect(jsonPath("$.book.isbn10", is("0134051998")))
             .andExpect(jsonPath("$.book.publishDate", is("1999-10-05")));
     }
 
@@ -130,7 +137,8 @@ class BookControllerTests {
             .id(id)
             .title("Extreme Programming Explained")
             .authorName("Kent Beck")
-            .isbn("9780201616415")
+            .isbn13("9780201616415")
+            .isbn10("0134051998")
             .publishDate(Utils.parseDate("1999-10-05"))
             .build();
 

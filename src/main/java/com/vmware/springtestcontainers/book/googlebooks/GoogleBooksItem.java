@@ -20,7 +20,8 @@ public class GoogleBooksItem {
         return Book.builder()
             .title(volumeInfo.getTitle())
             .authorName(extractAuthor())
-            .isbn(extractIsbn("ISBN_13"))
+            .isbn13(extractIsbn("ISBN_13"))
+            .isbn10(extractIsbn("ISBN_10"))
             .publishDate(Utils.parseDate(volumeInfo.getPublishedDate()))
             .build();
     }
