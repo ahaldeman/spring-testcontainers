@@ -43,6 +43,7 @@ dependencies {
 	testImplementation 'io.projectreactor:reactor-test'
 	testImplementation 'com.github.tomakehurst:wiremock-jre8-standalone:2.35.0'
 	testImplementation 'org.testcontainers:junit-jupiter'
+	testImplementation 'org.testcontainers:mssqlserver'
 }
 
 dependencyManagement {

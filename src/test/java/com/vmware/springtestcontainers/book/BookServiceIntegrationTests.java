@@ -1,5 +1,6 @@
 package com.vmware.springtestcontainers.book;
 
+import com.vmware.springtestcontainers.SQLServerTestBase;
 import com.vmware.springtestcontainers.book.googlebooks.GoogleBooksClient;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,10 +22,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
-@Testcontainers
 @SpringBootTest
 @ContextConfiguration(initializers = {BookServiceIntegrationTests.Initializer.class})
-public class BookServiceIntegrationTests {
+public class BookServiceIntegrationTests extends SQLServerTestBase {
 
     BookRandomizer bookRandomizer;
 
