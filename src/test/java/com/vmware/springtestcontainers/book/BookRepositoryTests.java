@@ -1,9 +1,11 @@
 package com.vmware.springtestcontainers.book;
 
+import com.vmware.springtestcontainers.SQLServerTestBase;
 import com.vmware.springtestcontainers.Utils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.util.List;
@@ -12,7 +14,8 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
-public class BookRepositoryTests {
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+public class BookRepositoryTests extends SQLServerTestBase {
 
     @Autowired
     BookRepository bookRepository;
