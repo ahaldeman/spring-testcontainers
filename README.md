@@ -7,7 +7,7 @@ and what some potential use cases may look like.
 
 #### Prerequisites
 You need to have the following installed:
-- JDK 11
+- JDK 11 (newer versions are likely but not guaranteed to work)
 - Docker (the Docker daemon must be running for tests using Testcontainers)
 
 #### How to Run
