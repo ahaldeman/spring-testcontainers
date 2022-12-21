@@ -1,7 +1,8 @@
-set -x
+#!/usr/bin/env bash
+set -o xtrace
 
 ./gradlew clean assemble
 
-docker build -t spring-testcontainers-image .
+docker build --tag spring-testcontainers-image .
 
-docker-compose up
+docker compose up
